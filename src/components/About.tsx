@@ -3,6 +3,9 @@ import { Terminal, CheckCircle2, Image as ImageIcon } from 'lucide-react';
 import profile from '../assets/profile.webp';
 
 export default function About() {
+	const startYear = 2023;
+	const currentYear = new Date().getFullYear();
+	const yearsOfExperience = currentYear - startYear; // Otomatis menghasilkan 3+ di tahun 2026
 	return (
 		<section
 			id="about"
@@ -124,17 +127,17 @@ export default function About() {
 						{[
 							{
 								label: 'DELIVERED_PROJECTS',
-								value: '10+',
+								value: '20+',
 								color: 'text-[#d99b73]',
 							},
 							{
 								label: 'BUILT_DASHBOARDS',
-								value: '6+',
+								value: '10+',
 								color: 'text-[#fbbf24]',
 							},
 							{
 								label: 'YEARS_EXPERIENCE',
-								value: '2+',
+								value: `${yearsOfExperience}+`,
 								color: 'text-[#3fb950]',
 							},
 						].map((item) => (
